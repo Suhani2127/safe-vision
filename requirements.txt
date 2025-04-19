@@ -1,3 +1,7 @@
 streamlit
 opencv-python
 fer
+streamlit
+streamlit-webrtc
+fer
+
