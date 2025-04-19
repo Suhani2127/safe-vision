@@ -8,8 +8,6 @@ tensorflow-cpu
 mediapipe
 numpy
 pandas
-streamlit
-streamlit-webrtc
 face_recognition
 numpy
 Pillow
