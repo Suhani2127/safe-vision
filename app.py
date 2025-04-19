@@ -17,9 +17,9 @@ st.markdown("Live emotion and person detection using MediaPipe + FER on your web
 alert_enabled = st.sidebar.checkbox("Enable Alerts", value=True)
 save_logs = st.sidebar.checkbox("Save Detection Logs")
 
-# Init logs
-if "log" not in st.session_state:
-    st.session_state.log = []
+# Initialize session state keys
+if 'log' not in st.session_state:
+    st.session_state['log'] = []
 
 # FER detector
 emotion_detector = FER(mtcnn=True)
@@ -62,7 +62,7 @@ class EmotionMediapipeProcessor(VideoProcessorBase):
                     self.last_detected = dominant_emotion
 
                     if save_logs:
-                        st.session_state.log.append({
+                        st.session_state['log'].append({
                             "time": time.strftime("%H:%M:%S"),
                             "emotion": dominant_emotion,
                             "faces": self.num_faces
@@ -86,7 +86,7 @@ if ctx.video_processor:
         st.error(f"⚠️ Potential Threat Detected: {emotion.upper()}")
 
 # Show logs
-if save_logs and st.session_state.log:
+if save_logs and st.session_state['log']:
     st.markdown("## 📝 Detection Log")
-    st.dataframe(pd.DataFrame(st.session_state.log))
+    st.dataframe(pd.DataFrame(st.session_state['log']))
 
