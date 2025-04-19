@@ -3,4 +3,5 @@ opencv-python
 streamlit-webrtc
 fer
 av
+opencv-python-headless
 
