@@ -8,7 +8,7 @@ tensorflow-cpu
 mediapipe
 numpy
 pandas
-face_recognition
+
 numpy
 Pillow
 
