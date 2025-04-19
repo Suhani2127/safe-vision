@@ -10,4 +10,4 @@ pandas
 libgl1
 numpy
 Pillow
-
+ffmpeg
