@@ -4,4 +4,5 @@ streamlit-webrtc
 fer
 av
 opencv-python-headless
+tensorflow-cpu
 
